@@ -1,0 +1,47 @@
+{
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@bouncyapp/react-native-apple-music": "^1.0.3",
+    "@react-native-community/slider": "^3.0.3",
+    "audio-buffer-utils": "^5.1.2",
+    "buffer": "^6.0.3",
+    "expo": "~40.0.0",
+    "expo-av": "~8.7.0",
+    "expo-file-system": "~9.3.0",
+    "expo-media-library": "~10.0.0",
+    "expo-music-info": "^1.0.1",
+    "expo-splash-screen": "~0.8.0",
+    "expo-status-bar": "~1.0.3",
+    "expo-updates": "~0.4.0",
+    "peaks.js": "^0.23.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "~0.63.4",
+    "react-native-gesture-handler": "~1.8.0",
+    "react-native-permissions": "^3.0.0",
+    "react-native-reanimated": "~1.13.0",
+    "react-native-screens": "~2.15.0",
+    "react-native-slider": "^0.11.0",
+    "react-native-unimodules": "~0.12.0",
+    "react-native-web": "~0.13.12",
+    "react-native-webview": "^11.0.2",
+    "react-native-webview-bridge-seamless": "0.0.15",
+    "waveform-react": "^0.2.3",
+    "wavesurfer.js": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.9.0",
+    "babel-jest": "~25.2.6",
+    "jest": "~25.2.6",
+    "react-test-renderer": "~16.13.1"
+  },
+  "private": true,
+  "name": "nosync",
+  "version": "1.0.0"
+}
