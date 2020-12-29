@@ -82,7 +82,7 @@ export default class App extends Component {
     let stateObject = "animations" + index;
     setTimeout(() => {
       Animated.timing(this.state[stateObject], {
-        toValue: 2,
+        toValue: 1.5,
         easing: Easing.back(),
         duration: 500,
         useNativeDriver: true
@@ -100,7 +100,7 @@ export default class App extends Component {
 
   animateTitle = () => {
     Animated.timing(this.state.animationsTitle, {
-      toValue: 1.3,
+      toValue: 1.5,
       easing: Easing.back(),
       duration: 400,
       useNativeDriver: true
@@ -120,17 +120,17 @@ export default class App extends Component {
       animationInterval: setInterval(() => {
         if(!this.state.crossfadeInUse){
           this.animateTitle();
-          this.animate(0, 100);
-          this.animate(1, 200);
-          this.animate(2, 300);
-          this.animate(3, 400);
-          this.animate(4, 500);
-          this.animate(5, 600);
-          this.animate(6, 700);
-          this.animate(7, 800);
-          this.animate(8, 900);
+          this.animate(0, 50);
+          this.animate(1, 100);
+          this.animate(2, 150);
+          this.animate(3, 200);
+          this.animate(4, 250);
+          this.animate(5, 300);
+          this.animate(6, 350);
+          this.animate(7, 400);
+          this.animate(8, 450);
         }
-      }, 10000)
+      }, 20000)
     })
   }
 

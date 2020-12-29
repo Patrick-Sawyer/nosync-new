@@ -281,12 +281,12 @@ class Deck extends Component {
                                     name="addfile" 
                                     adjustsFontSizeToFit size={20} 
                                     color={ this.props.color} 
-                                    style={[this.state.iconShadow, this.state.isPlaying && {opacity: 0.1}]}
+                                    style={this.state.iconShadow}
                                 />
                             </View>
                         </TouchableOpacity>
                         <View style={{ width: 10 }} />
-                        <TouchableWithoutFeedback 
+                        <TouchableOpacity 
                             style={{ flex: 1 }}
                             onPress={() => {
                                 let newState = !this.state.lockPitch;
@@ -312,7 +312,7 @@ class Deck extends Component {
                                     }}
                                 >KEY</Text>
                             </View>
-                        </TouchableWithoutFeedback>
+                        </TouchableOpacity>
                     </View>
                     <View style={[styles.Component, styles.mainElement, { flex: 1, flexDirection: "row"}]}>
                         <View style={{flexDirection: "column", flexGrow: 1, maxWidth: 700}}>
