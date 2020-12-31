@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View, StyleSheet, Text, Platform } from "react-native";
 import {WebView} from 'react-native-webview';
 // import { withWebViewBridge } from 'react-native-webview-bridge-seamless';
-var RNFS = require('react-native-fs');
+
 // import { WebView } from 'react-native-webview';
 // import { renderToString } from 'react-dom/server'
 // var ab2str = require('arraybuffer-to-string')
