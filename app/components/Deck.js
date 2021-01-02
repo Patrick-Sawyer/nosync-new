@@ -5,7 +5,6 @@ import Slider from '@react-native-community/slider';
 import { Audio } from 'expo-av';
 
 import SelectTune from "./SelectTune";
-import AudioAnalyser from "./AudioAnalyser";
 
 class Deck extends Component {
 
@@ -239,17 +238,6 @@ class Deck extends Component {
                             </Text>
                         </View>
                     </TouchableOpacity>
-                    <View style={{
-                        flex: 1.6,
-                        borderWidth: 2,
-                        borderColor: "#322f33",
-                        borderRadius: 5
-                    }}>
-                        <AudioAnalyser 
-                            uri={this.state.uri}
-                            color={this.props.color}
-                        />
-                    </View>
                     <View style={[styles.Component, styles.mainElement, { flex: 1, flexDirection: "row" }]}>
                         <TouchableOpacity 
                             style={{ flex: 1 }}
@@ -260,16 +248,12 @@ class Deck extends Component {
                             }}
                         >
                             <View style={[styles.playButton, { padding: 0 }]}>
-                                <Text
-                                    adjustsFontSizeToFit
-                                    numberOfLines={1}
-                                    style={{
-                                        fontSize: 20,
-                                        color: this.props.color,
-                                        textShadowColor: this.props.color,
-                                        textShadowRadius: 1,
-                                    }}
-                                >CUE</Text>
+                                <SimpleLineIcons 
+                                name="control-start" 
+                                adjustsFontSizeToFit size={20} 
+                                color={ this.props.color} 
+                                style={this.state.iconShadow}
+                                />
                             </View>
                         </TouchableOpacity>
                         <View style={{ width: 10 }} />
@@ -314,7 +298,7 @@ class Deck extends Component {
                             </View>
                         </TouchableOpacity>
                     </View>
-                    <View style={[styles.Component, styles.mainElement, { flex: 1, flexDirection: "row"}]}>
+                    <View style={[styles.Component, styles.mainElement, { flex: 0.5, flexDirection: "row"}]}>
                         <View style={{flexDirection: "column", flexGrow: 1, maxWidth: 700}}>
                             <View style={{flexGrow: 1, width: "100%", justifyContent: "center", zIndex: 2 }}>
                             <Slider
@@ -471,9 +455,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         padding: 5,
         borderWidth: 2,
-        borderRadius: 5,
+        borderRadius: 50,
         borderColor: "#322f33",
-        backgroundColor: "rgba(0,0,0,0.05)"
+        backgroundColor: "rgba(0,0,0,0.05)",
+        marginVertical: 5,
     },
     eqComponent: {
         flex: 1,

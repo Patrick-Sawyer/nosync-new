@@ -82,7 +82,7 @@ export default class App extends Component {
     let stateObject = "animations" + index;
     setTimeout(() => {
       Animated.timing(this.state[stateObject], {
-        toValue: 1.5,
+        toValue: 1.2,
         easing: Easing.back(),
         duration: 500,
         useNativeDriver: true
@@ -100,7 +100,7 @@ export default class App extends Component {
 
   animateTitle = () => {
     Animated.timing(this.state.animationsTitle, {
-      toValue: 1.5,
+      toValue: 1.1,
       easing: Easing.back(),
       duration: 400,
       useNativeDriver: true
@@ -182,7 +182,7 @@ export default class App extends Component {
   loadingTest = () => {
     return (
       <React.Fragment>
-        <View style={[styles.component, {paddingTop: 10, flexDirection: "row", flex: 0.5, justifyContent: "center", alignItems: "center"}]}>
+        <View style={[styles.component, {paddingTop: 10, flexDirection: "row", flex: 0.8, justifyContent: "center", alignItems: "center"}]}>
           <View style={{flexGrow: 1, height: "100%", flexDirection: "row", marginLeft: 5}}>
             {this.decoration(colors[1], "80%", 0.8, 8)}
             {this.decoration(colors[1], "100%", 1, 7)}
@@ -226,7 +226,7 @@ export default class App extends Component {
         {this.lineBreak(false)}
         <View style={[styles.component, styles.crossfadeContainer]}>
           <View style={styles.crossfade}>
-            <View style={{flexDirection: "row", alignSelf: "flex-start", alignContent: "center", flex: 1, marginBottom: 10}}>
+            <View style={{flexDirection: "row", alignSelf: "flex-start", alignContent: "center", flex: 0.8, marginTop: 20}}>
               <View style={{flex: 1, flexDirection: "row", height: "100%", paddingRight: 15, opacity: 0.75}}>
                 {this.decoration(colors[1], "100%", 1)}
                 {this.decoration(colors[1], "80%", 0.8)}
@@ -245,7 +245,7 @@ export default class App extends Component {
                 {this.decoration(colors[0], "100%", 1)}
               </View>
             </View>
-            <View style={{flexDirection: "column", width: "100%", maxWidth: 700}}>
+            <View style={{flex: 1, flexDirection: "column", width: "100%", maxWidth: 700}}>
               <View style={{flexGrow: 1, width: "100%", justifyContent: "center", zIndex: 2 }}>
                 <Slider
                   style={{width: "100%", height: 20}}
@@ -331,7 +331,7 @@ const styles = StyleSheet.create({
   },
   crossfadeContainer: {
     paddingHorizontal: 10,
-    flex: 1,
+    flex: 2,
   },
   crossfade: {
     width: "100%",
