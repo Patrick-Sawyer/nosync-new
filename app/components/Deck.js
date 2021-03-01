@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, TouchableOpacity, Platform, Alert, TouchableWithoutFeedback, PixelRatio } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, Platform, Alert, TouchableWithoutFeedback, NativeModules } from "react-native";
 import { AntDesign, SimpleLineIcons } from '@expo/vector-icons';
 import Slider from '@react-native-community/slider';
 import { Audio } from 'expo-av';
@@ -183,7 +183,7 @@ class Deck extends Component {
                 uri: uri,
                 lastValue: 1,
             })
-            this.loadAudio(uri)
+            this.loadAudio(uri);
         }
     }
 
@@ -327,8 +327,8 @@ class Deck extends Component {
                                     })
                                 }}
     
-                                thumbTintColor={"grey"}
-                                thumbImage={require("../images/greyCircle.png")} 
+                                thumbTintColor={this.props.color}
+                               
                             />
                             </View>
                             <View style={{flexGrow: 1, width: "100%", justifyContent: "center", position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", paddingHorizontal: 16}}>

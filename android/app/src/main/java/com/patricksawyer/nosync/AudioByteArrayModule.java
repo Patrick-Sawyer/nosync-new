@@ -20,12 +20,10 @@ public class AudioByteArrayModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void isEqual(
-        int a,
-        int b,
+    public void getAudioBuffer(
+        String filePath,
         Callback booleanCallback) {
-        boolean equal = a == b;
-        booleanCallback.invoke(equal);
+            booleanCallback.invoke(filePath);
     }
 
 }

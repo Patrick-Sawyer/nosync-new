@@ -13,5 +13,6 @@
     <!-- Below line is handled by '@expo/configure-splash-screen' command and it's discouraged to modify it manually -->
     <!-- Customize your splash screen theme here -->
     <item name="android:windowBackground">@drawable/splashscreen</item>
+    <item name="colorPrimaryDark">@color/splashscreen_background</item>
   </style>
 </resources>

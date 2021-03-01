@@ -270,7 +270,7 @@ export default class App extends Component {
                       crossfadeInUse: false,
                     })
                   }}
-                  thumbImage={require("./app/images/greyCircle.png")}
+
                 />
               </View>
               <View style={{flexGrow: 1, width: "100%", justifyContent: "center", position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", paddingHorizontal: 16}}>
