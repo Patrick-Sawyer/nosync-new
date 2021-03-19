@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity, Platform, Alert, TouchableWit
 import { AntDesign, SimpleLineIcons } from '@expo/vector-icons';
 import Slider from '@react-native-community/slider';
 import { Audio } from 'expo-av';
+const { AudioByteArrayModule } = NativeModules;
 
 import SelectTune from "./SelectTune";
 
@@ -27,6 +28,12 @@ class Deck extends Component {
             textShadowColor: this.props.color,
             textShadowRadius: 1,
         }
+    }
+
+    getArrayBuffer = (url) => {
+        AudioByteArrayModule.getAudioBuffer(url, (response) => {
+            console.log(response)
+        })
     }
 
     upDatevolume = (newVolume) => {
@@ -68,7 +75,6 @@ class Deck extends Component {
 
 
     async loadAudio(uri) {
-        console.log(this.state.volume)
         this.setState({
             pitchControl: 1,
         })
@@ -183,6 +189,7 @@ class Deck extends Component {
                 uri: uri,
                 lastValue: 1,
             })
+            this.getArrayBuffer(uri);
             this.loadAudio(uri);
         }
     }
